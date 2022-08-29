@@ -1,0 +1,5 @@
+{
+  "mysql_db": "DATABASE_URL",
+  "env": "NODE_ENV",
+  "origin": "ORIGIN"
+}
