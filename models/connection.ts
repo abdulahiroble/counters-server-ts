@@ -1,15 +1,11 @@
 import { Sequelize } from "sequelize-typescript";
-
 import { Counter } from "./counter.model";
+import config from "config";
 
-const connection = new Sequelize({
+const connection = new Sequelize(config.get("mysql_db"), {
   dialect: "mysql",
-  host: "localhost",
-  username: "counter-app",
-  password: "123456",
-  database: "counters",
-  logging: false,
   models: [Counter],
+  logging: true,
 });
 
 export default connection;
